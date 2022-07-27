@@ -137,6 +137,10 @@ app.get("/botCallback", function (req, res) {
     "Printing parameters received for /botCallback (GET) ",
     req.query
   );
+  console.log(
+    "Printing Body received for /botCallback (GET) ",
+    req.body
+  );
 
   res.status = 200;
 
