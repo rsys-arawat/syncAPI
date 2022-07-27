@@ -24,9 +24,9 @@ const config = {
 
 function myFunction () {
 
-        console.log("Start time is:", Date());
-
+        
         start_time =  Date.now();
+        console.log("Start time is:", Date(), start_time);
 
         axios.post(
                 "https://staging.hellohaptik.com/v6/log_message_sent_from_user/",
@@ -51,7 +51,7 @@ function myFunction () {
         end_time =  Date.now();
         //console.log("MAX_COUNT reached", countRsp.counter);
         //console.log("Start time:", start_time);
-        console.log("End time is:", Date());
+        console.log("End time is:", Date(), end_time);
         console.log("Iteration: " + countRsp.counter + "    Total time taken (ms):", end_time-start_time);
         
 

@@ -133,6 +133,9 @@ app.post("/gatherAction", function (req, res) {
 // ***************************************
 
 app.get("/botCallback", function (req, res) {
+
+  console.log("Bot API callback received at:", Date(), Date.now());
+
   console.log(
     "Printing parameters received for /botCallback (GET) ",
     req.query
@@ -150,6 +153,9 @@ app.get("/botCallback", function (req, res) {
 });
 
 app.post("/botCallback", function (req, res) {
+
+  console.log("Bot API callback received at:", Date(), Date.now());
+
   console.log(
     "Printing parameters received for /botCallback (POST) ",
     req.body
