@@ -9,8 +9,8 @@ const newPost = {
     "business_id": 4939,
     "body": "I want to know about Fibre Connection",
     "auth_id": "__-43-00b79fb0c71246aaf0a688128583cd94329436ab",
-    "message_type": 0,
-    "sync_call": true
+    "message_type": 0
+    //"sync_call": true
 };
 
 const config = {
@@ -24,7 +24,10 @@ const config = {
 
 function myFunction () {
 
+        console.log("Start time is:", Date());
+
         start_time =  Date.now();
+
         axios.post(
                 "https://staging.hellohaptik.com/v6/log_message_sent_from_user/",
                 newPost,
@@ -48,8 +51,9 @@ function myFunction () {
         end_time =  Date.now();
         //console.log("MAX_COUNT reached", countRsp.counter);
         //console.log("Start time:", start_time);
-        console.log("Iteration: " + countRsp.counter + "    Total response time (ms):", end_time-start_time);
-        //console.log("End time is:", Date());
+        console.log("End time is:", Date());
+        console.log("Iteration: " + countRsp.counter + "    Total time taken (ms):", end_time-start_time);
+        
 
     }
 
@@ -64,7 +68,10 @@ function myFunction () {
 
 for (i=0; i < MAX_COUNT ; i++) {
 
-        myFunction();
+       // myFunction();
 		
 		//console.log("Iteration:", i, (end_time-start_time));
 }
+
+// export it
+module.exports = { myFunction };
