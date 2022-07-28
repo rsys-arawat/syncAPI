@@ -6,18 +6,18 @@ let start_time, end_time;
 const MAX_COUNT = 1; 
 
 const newPost = {
-    "business_id": 4939,
-    "body": "I want to know about Fibre Connection",
-    "auth_id": "__-43-00b79fb0c71246aaf0a688128583cd94329436ab",
-    "message_type": 0
-    //"sync_call": true
+    "business_id": 1717,
+    "body": "please transfer to Agent",
+    "auth_id": "abcdefdcffdgre1234567",
+    "message_type": 0,
+    "sync_call": true
 };
 
 const config = {
         headers: {
                 "Content-type": "application/json; charset=UTF-8",
-        "client_id": "00b79fb0c71246aaf0a688128583cd94329436ab",
-        "Authorization": "Bearer facebook-coke:71b6f675c3fa941b54cce0f13b73e92fb3e11280"
+                "client_id": "498e5e0a5e1e0fbcfb369dccc675810ab815cfb9",
+                "Authorization": "Bearer facebook-coke:35c7fc51fcf183ec1299125f1e6608549567a46d"
         },
 };
 
@@ -29,7 +29,7 @@ function myFunction () {
         console.log("Start time is:", Date(), start_time);
 
         axios.post(
-                "https://staging.hellohaptik.com/v6/log_message_sent_from_user/",
+                "https://jio-api.hellohaptik.com/v6/log_message_sent_from_user/",
                 newPost,
                 config
         )
@@ -68,7 +68,7 @@ function myFunction () {
 
 for (i=0; i < MAX_COUNT ; i++) {
 
-       // myFunction();
+       //myFunction();
 		
 		//console.log("Iteration:", i, (end_time-start_time));
 }
