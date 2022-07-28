@@ -136,20 +136,20 @@ app.get("/botCallback", function (req, res) {
 
   console.log("Bot API callback received at:", Date(), Date.now());
 
+  //console.log(
+   // "Printing parameters received for /botCallback (GET) ",
+  //  req.query
+ // );
   console.log(
-    "Printing parameters received for /botCallback (GET) ",
-    req.query
-  );
-  console.log(
-    "Printing Body received for /botCallback (GET) ",
+    "Response Body (GET): ",
     req.body
   );
 
   res.status = 200;
 
   // send 200 OK response
-
-  res.send("");
+  res.header("Content-Type", "text/plain");
+  res.send("Bot API callback response received !!!");
 });
 
 app.post("/botCallback", function (req, res) {
@@ -157,13 +157,11 @@ app.post("/botCallback", function (req, res) {
   console.log("Bot API callback received at:", Date(), Date.now());
 
   console.log(
-    "Printing parameters received for /botCallback (POST) ",
+    "Response Body (POST): ",
     req.body
   );
 
-  res.status = 200;
-
   // send 200 OK response
-
-  res.send("");
+  res.header("Content-Type", "text/plain");
+  res.send("Bot API callback response received !!!");
 });
